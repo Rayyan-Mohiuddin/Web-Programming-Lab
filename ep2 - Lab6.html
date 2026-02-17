@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Promise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Simple Promise Example</h2>
+
+  <button onclick="runPromise()">Run Promise</button>
+
+  <p id="output"></p>
+
+  <script>
+    function runPromise() {
+
+      const myPromise = new Promise((resolve, reject) => {
+        const success = true;
+
+        if (success) {
+          resolve("Promise resolved successfully!");
+        } else {
+          reject("Promise rejected!");
+        }
+      });
+
+      myPromise
+        .then(result => {
+          document.getElementById("output").innerHTML = result;
+        })
+        .catch(error => {
+          document.getElementById("output").innerHTML = error;
+        });
+    }
+  </script>
+
+</body>
+</html>

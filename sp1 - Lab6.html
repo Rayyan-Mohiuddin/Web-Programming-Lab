@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Destructuring</title>
+</head>
+<body>
+
+  <h2>Object Destructuring Example</h2>
+
+  <button onclick="show()">Destructure Object</button>
+
+  <p id="output"></p>
+
+  <script>
+    function show() {
+      const person = {
+        name: "Alex",
+        age: 22,
+        city: "Mumbai"
+      };
+
+      const { name, age, city } = person;
+
+      document.getElementById("output").innerHTML =
+        `Name: ${name}<br>Age: ${age}<br>City: ${city}`;
+    }
+  </script>
+
+</body>
+</html>

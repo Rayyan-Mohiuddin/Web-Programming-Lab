@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameters</title>
+</head>
+<body>
+    <input type="text" placeholder="Name">
+    <button onclick="str()">Enter</button>
+    <p></p>
+
+    <script>
+        
+        function str(n = "Robo") {
+            const name = document.querySelector('input').value;
+            if (name) {
+                n = name;
+            }
+            document.querySelector('p').innerHTML = `Hi, ${n}!`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Literal Enhancement</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      margin: 5px 0;
+    }
+    button {
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Object Literal Enhancement</h2>
+
+  <input type="text" id="name" placeholder="Name"><br>
+  <input type="number" id="age" placeholder="Age"><br>
+  <button onclick="createObject()">Create Object</button>
+
+  <p id="output"></p>
+
+  <script>
+    function createObject() {
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+
+      const person = {
+        name,
+        age,
+        greet() {
+          return `Hi, I am ${this.name} and I am ${this.age} years old.`;
+        }
+      };
+
+      document.getElementById("output").innerHTML = person.greet();
+    }
+  </script>
+
+</body>
+</html>

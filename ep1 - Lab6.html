@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spread Operator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Spread Operator: Clone & Merge</h2>
+
+  <button onclick="show()">Run Example</button>
+
+  <p id="output"></p>
+
+  <script>
+    function show() {
+
+      const arr1 = [1, 2, 3];
+      const arr2 = [4, 5, 6];
+
+      const arrClone = [...arr1];
+
+      const arrMerged = [...arr1, ...arr2];
+
+      const obj1 = { name: "Alex", age: 25 };
+      const obj2 = { city: "Delhi", age: 30 };
+
+      const objClone = { ...obj1 };
+
+      const objMerged = { ...obj1, ...obj2 };
+
+      document.getElementById("output").innerHTML = `
+        <b>Array Clone:</b> ${arrClone}<br>
+        <b>Array Merge:</b> ${arrMerged}<br><br>
+
+        <b>Object Clone:</b> ${JSON.stringify(objClone)}<br>
+        <b>Object Merge:</b> ${JSON.stringify(objMerged)}
+      `;
+    }
+  </script>
+
+</body>
+</html>

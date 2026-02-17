@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Destructuring</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Array Destructuring with Element Skipping</h2>
+
+  <button onclick="show()">Destructure Array</button>
+
+  <p id="output"></p>
+
+  <script>
+    function show() {
+      const numbers = [10, 20, 30, 40, 50];
+
+      const [first, , third, , fifth] = numbers;
+
+      document.getElementById("output").innerHTML =
+        `First: ${first}<br>
+         Third: ${third}<br>
+         Fifth: ${fifth}`;
+    }
+  </script>
+
+</body>
+</html>
